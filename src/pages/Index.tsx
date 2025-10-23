@@ -30,7 +30,7 @@ const Index = () => {
       <nav className="border-b border-black/10">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <Logo size={32} />
+            <Logo size={48} />
             <span className="text-xl font-bold">Тёмная Марга</span>
           </Link>
           <div className="flex gap-8">

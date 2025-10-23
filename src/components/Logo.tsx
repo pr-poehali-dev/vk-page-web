@@ -1,16 +1,16 @@
-const Logo = ({ size = 40 }: { size?: number }) => {
+const Logo = ({ size = 48 }: { size?: number }) => {
   return (
     <svg 
       width={size} 
       height={size} 
-      viewBox="0 0 100 100" 
+      viewBox="0 0 200 200" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
       <path 
-        d="M50 5 C70 5, 95 20, 95 50 C95 80, 70 95, 50 95 C30 95, 5 80, 5 50 C5 20, 25 8, 45 10" 
+        d="M 100 20 C 135 20, 170 35, 180 65 C 190 95, 180 130, 150 155 C 120 180, 80 185, 50 170 C 20 155, 10 125, 15 90 C 20 55, 40 30, 70 22" 
         stroke="currentColor" 
-        strokeWidth="4" 
+        strokeWidth="6" 
         fill="none"
         strokeLinecap="round"
       />
