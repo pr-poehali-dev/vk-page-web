@@ -93,6 +93,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Source Sans 3", sans-serif;
+    line-height: 1.5;
   }
 
   h1,
@@ -103,5 +104,10 @@
   h6 {
     font-family: "Cormorant", serif;
     font-weight: 600;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
   }
 }

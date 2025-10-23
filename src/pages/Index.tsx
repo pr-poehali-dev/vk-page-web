@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import Logo from "@/components/Logo";
 import { Link } from "react-router-dom";
 
 const featuredArticles = [
@@ -27,8 +28,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <nav className="border-b border-black/10">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold">БЛОГ</Link>
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3">
+            <Logo size={32} />
+            <span className="text-xl font-bold">Тёмная Марга</span>
+          </Link>
           <div className="flex gap-8">
             <Link to="/" className="hover:opacity-60 transition-opacity font-semibold">Главная</Link>
             <Link to="/articles" className="hover:opacity-60 transition-opacity">Статьи</Link>
@@ -38,18 +42,18 @@ const Index = () => {
       </nav>
 
       <main className="max-w-4xl mx-auto px-6">
-        <section className="py-24 border-b border-black/10">
-          <h1 className="text-7xl mb-6 leading-tight">
+        <section className="py-16 border-b border-black/10">
+          <h1 className="text-5xl mb-4">
             Тёмная Марга
           </h1>
-          <p className="text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl">
             Медитация с последствиями: правда об Ананда Марге и не только
           </p>
         </section>
 
-        <section className="py-16">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-4xl">Последние статьи</h2>
+        <section className="py-12">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl">Последние статьи</h2>
             <Link 
               to="/articles" 
               className="flex items-center gap-2 hover:opacity-60 transition-opacity"
@@ -59,19 +63,19 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {featuredArticles.map((article) => (
               <Card 
                 key={article.id} 
-                className="p-8 hover:shadow-lg transition-shadow border border-black/10"
+                className="p-6 hover:shadow-lg transition-shadow border border-black/10"
               >
-                <div className="flex gap-6">
+                <div className="flex gap-4">
                   <div className="shrink-0">
-                    <Icon name="FileText" size={28} className="opacity-60" />
+                    <Icon name="FileText" size={24} className="opacity-60" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-3xl mb-3">{article.title}</h3>
-                    <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                    <h3 className="text-2xl mb-2">{article.title}</h3>
+                    <p className="text-base text-muted-foreground mb-3">
                       {article.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
@@ -90,27 +94,27 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 border-t border-black/10">
-          <h2 className="text-4xl mb-12">О чём этот блог</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="space-y-3">
-              <Icon name="Eye" size={32} />
-              <h3 className="text-2xl">Разоблачение</h3>
-              <p className="text-muted-foreground leading-relaxed">
+        <section className="py-12 border-t border-black/10">
+          <h2 className="text-3xl mb-8">О чём этот блог</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-2">
+              <Icon name="Eye" size={28} />
+              <h3 className="text-xl">Разоблачение</h3>
+              <p className="text-muted-foreground text-sm">
                 Анализ сектантских практик и методов манипуляции
               </p>
             </div>
-            <div className="space-y-3">
-              <Icon name="Shield" size={32} />
-              <h3 className="text-2xl">Защита</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="space-y-2">
+              <Icon name="Shield" size={28} />
+              <h3 className="text-xl">Защита</h3>
+              <p className="text-muted-foreground text-sm">
                 Способы распознавания и противодействия индоктринации
               </p>
             </div>
-            <div className="space-y-3">
-              <Icon name="Heart" size={32} />
-              <h3 className="text-2xl">Поддержка</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="space-y-2">
+              <Icon name="Heart" size={28} />
+              <h3 className="text-xl">Поддержка</h3>
+              <p className="text-muted-foreground text-sm">
                 Помощь тем, кто хочет выйти из секты
               </p>
             </div>
@@ -118,8 +122,8 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="border-t border-black/10 mt-24">
-        <div className="max-w-4xl mx-auto px-6 py-8 text-center text-sm text-muted-foreground">
+      <footer className="border-t border-black/10 mt-16">
+        <div className="max-w-4xl mx-auto px-6 py-6 text-center text-sm text-muted-foreground">
           <p>© 2024 Тёмная Марга. Все права защищены.</p>
         </div>
       </footer>
