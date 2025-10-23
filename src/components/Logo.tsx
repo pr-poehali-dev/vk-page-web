@@ -7,16 +7,12 @@ const Logo = ({ size = 40 }: { size?: number }) => {
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle 
-        cx="50" 
-        cy="50" 
-        r="45" 
+      <path 
+        d="M50 5 C70 5, 95 20, 95 50 C95 80, 70 95, 50 95 C30 95, 5 80, 5 50 C5 20, 25 8, 45 10" 
         stroke="currentColor" 
-        strokeWidth="3" 
+        strokeWidth="4" 
         fill="none"
         strokeLinecap="round"
-        strokeDasharray="1 8"
-        opacity="0.9"
       />
     </svg>
   );
